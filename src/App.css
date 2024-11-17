@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', serif;
+}
+
+/* --------------- Common --------------- */
+::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 9999px;
+    background-color: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: #d1d5db;
+}
+
+.single-line,
+.two-line,
+.three-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+}
+
+.single-line {
+    -webkit-line-clamp: 1;
+    max-height: 1.5em;
+}
+
+.two-line {
+    -webkit-line-clamp: 2;
+    max-height: 3em;
+}
+
+.three-line {
+    -webkit-line-clamp: 3;
+    max-height: 4.5em;
+}
