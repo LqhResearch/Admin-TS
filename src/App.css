@@ -6,9 +6,32 @@
 
 body {
     font-family: 'Roboto', serif;
+    font-size: 16px;
 }
 
 /* --------------- Common --------------- */
+.bg-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.bg-primary-light {
+    background-color: var(--color-primaryLight);
+    color: black;
+}
+
+.text-primary-light {
+    color: var(--color-primaryLight);
+}
+
+.text-color {
+    color: var(--color-text);
+}
+
 ::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.25rem;

@@ -5,8 +5,11 @@ import NavbarItemComponent from './item';
 
 const NavbarComponent: FC = () => {
     return (
-        <div className="flex-1 p-3 overflow-y-auto">
+        <div className="flex-1 p-3 text-sm overflow-y-auto">
             <NavbarItemComponent icon={AiOutlineDashboard} text="Dashboard" url="/" isActive />
+
+            <div className="my-3 uppercase text-xs font-semibold text-primary">Components</div>
+
             <NavbarItemComponent
                 icon={FiEdit}
                 text="Forms"

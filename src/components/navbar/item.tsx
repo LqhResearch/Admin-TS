@@ -24,14 +24,26 @@ const NavbarItemComponent: FC<Props> = ({
         <div className="my-2">
             <Link
                 to={url}
-                className={`p-2 flex items-center justify-between rounded-md hover:bg-slate-100 ${isActive ? 'bg-emerald-50 text-emerald-500 font-semibold' : ''}`}
+                className={`flex items-center justify-between rounded-lg hover:bg-slate-100 ${isActive ? 'bg-primary-light text-primary font-semibold' : ''}`}
                 onClick={() => child.length && setOpen((prev) => !prev)}
             >
-                <div className="flex items-center w-full">
-                    {Icon && <Icon className="text-xl" />}
-                    <span className="flex-1 mx-2.5 single-line">{text}</span>
+                <div className="w-full flex items-center">
+                    {Icon && (
+                        <div
+                            className={`bg-slate-100 p-2 rounded-lg ${isActive && 'bg-primary text-white'}`}
+                        >
+                            <Icon className="text-xl" />
+                        </div>
+                    )}
+                    <span className={`flex-1 mx-2.5 single-line ${isActive && 'text-primary'}`}>
+                        {text}
+                    </span>
                 </div>
-                {child.length > 0 && <IoIosArrowDown className="text-xl" />}
+                {child.length > 0 && (
+                    <div className="p-2">
+                        <IoIosArrowDown className="text-sm" />
+                    </div>
+                )}
             </Link>
             <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-screen' : 'max-h-0'}`}
@@ -41,7 +53,7 @@ const NavbarItemComponent: FC<Props> = ({
                         <Link
                             key={index}
                             to={item.url || '#'}
-                            className={`p-2 ps-6 flex items-center rounded-md ${item.isActive ? 'text-emerald-500 font-semibold' : ''}`}
+                            className={`p-2 ps-6 flex items-center rounded-lg ${item.isActive ? 'text-primary' : ''}`}
                         >
                             <GoDot className="text-xl" />
                             <div className="flex-1 mx-2.5 single-line">{item.text}</div>

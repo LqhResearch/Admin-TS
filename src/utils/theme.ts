@@ -1,5 +1,9 @@
 export const theme = {
-    colors: {},
+    colors: {
+        primary: '#10B981',
+        primaryLight: '#ECFDF5',
+        text: '#475569',
+    },
     breakpoints: {
         sm: '576px',
         md: '768px',
